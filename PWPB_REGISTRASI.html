@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Biodata Siswa</title>
+    </head>
+<body>
+    <form action="contact.php" method="post">
+        <fieldset>
+            <legend><b>Biodata Siswa</b></legend>
+        <p>
+            <label><b>Nama:</b></label>
+            <input type="text" name="nama" placeholder="Nama lengkap..." />
+        </p>
+        <p>
+            <label><b>Tempat,Tanggal Lahir:</b></label>
+            <input type="text" name="Tempat" />
+            <input type="date" name="tanggal" />
+        </p>
+        <p>
+            <label><b>Alamat:</b></label>
+            <textarea name="alamat"></textarea>
+        </p>
+        <p>
+            <label><b>Jenis Kelamin:</b></label>
+            <label><input type="radio" name="jenis_kelamin" value="laki-laki" />
+                Laki-laki</label>
+                <label><input type="radio" name="jenis_kelamin" value="perempuan" />
+                Perempuan</label>
+        </p>
+        <p>
+            <label><b>Agama:</b></label>
+            <select name="agama">
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+            </select>
+        </p>
+        <p>
+            <label><b>Email:</b></label>
+            <input type="email" name="email" placeholder="isi Emailmu..." />
+        </p>
+        <p>
+            <label><b>Hobi:</b><input type="checkbox">Ngegame
+                <input type="checkbox">ngecoding</label>
+        </p>
+        <p>
+            <label><b>Sekolah:</b></label>
+            <input type="text" name="Sekolah" placeholder="SMK.." />
+        </p>
+        <p>
+            <input type="submit" name="submit" value="KIRIM" />
+        </p>
+        </fieldset>
+    </form>
+</body>
+</html>
