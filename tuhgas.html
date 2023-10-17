@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bootstrap</title>
+    <!-- Link ke Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="alert alert-primary text-center mt-3">Biodata Siswa</h2>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="nama"><b>Nama:</b></label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="tempatLahir">Tempat Lahir:</label>
+                <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" required>
+            </div>
+            <div class="form-group">
+                <label for="tanggalLahir">Tanggal Lahir:</label>
+                <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <input type="text" class="form-control" id="alamat" name="alamat" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="sekolah">Sekolah:</label>
+                <input type="text" class="form-control" id="sekolah" name="sekolah" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        <div class="mt-4" id="output">
+            <!-- Output akan ditampilkan di sini menggunakan JavaScript -->
+        </div>
+    </div>
+
+    <!-- Link ke Bootstrap JS (Popper.js dan Bootstrap.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah pengiriman form
+
+            // Mengambil nilai dari input
+            const nama = document.getElementById("nama").value;
+            const tempatLahir = document.getElementById("tempatLahir").value;
+            const tanggalLahir = document.getElementById("tanggalLahir").value;
+            const alamat = document.getElementById("alamat").value;
+            const email = document.getElementById("email").value;
+            const sekolah = document.getElementById("sekolah").value;
+
+            // Membuat output
+            const outputHTML = `
+                <p><strong>Nama:</strong> <b> ${nama}</b></p>
+                <p><strong>Tempat Lahir:</strong> <b>${tempatLahir}</b></p>
+                <p><strong>Tanggal Lahir:</strong> <b>${tanggalLahir}</b></p>
+                <p><strong>Alamat:</strong> <b>${alamat}</b></p>
+                <p><strong>Email:</strong> <b>${email}</b></p>
+                <p><strong>Sekolah:</strong> <b>${sekolah}</b></p>
+            `;
+
+            // Menampilkan output di div dengan id "output"
+            document.getElementById("output").innerHTML = outputHTML;
+        });
+    </script>
+</body>
+</html>
